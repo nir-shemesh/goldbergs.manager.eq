@@ -1,0 +1,59 @@
+ 
+<!DOCTYPE html>
+ 
+<html lang="en">
+ 
+<head>
+ 
+<meta charset="UTF-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+ 
+<title>Goldberg's Bagels</title>
+ 
+<link rel="manifest" href="manifest.webmanifest">
+ 
+<link rel="icon" href="icons/icon-192.png">
+ 
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+ 
+<meta name="apple-mobile-web-app-capable" content="yes">
+ 
+<meta name="mobile-web-app-capable" content="yes">
+ 
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ 
+<meta name="apple-mobile-web-app-title" content="Goldberg's">
+ 
+<meta name="theme-color" content="#000000">
+ 
+<style>
+ 
+html,body{margin:0;height:100%;background:#000;overflow:hidden;overscroll-behavior:none;-webkit-user-select:none;user-select:none}
+ 
+iframe{position:fixed;inset:0;width:100%;height:100%;border:0;background:#000}
+ 
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<!-- >>> PUT YOUR APPS SCRIPT WEB APP URL (the one ending in /exec) BELOW <<< -->
+ 
+<iframe id="app" allow="fullscreen; clipboard-read; clipboard-write; camera; microphone"></iframe>
+ 
+<script>
+ 
+var APP_URL = 'https://script.google.com/macros/s/AKfycbxaTk-azqueSDxwbUlEFTL6XCrbB8QjVcSq4UpfyvFQRbAqM6iT_R9D6GIwzDPu_nj7kQ/exec';
+ 
+document.getElementById('app').src = APP_URL;
+ 
+if ('serviceWorker' in navigator) window.addEventListener('load', function(){ navigator.serviceWorker.register('sw.js').catch(function(){}); });
+ 
+</script>
+ 
+</body>
+ 
+</html>
+ 
